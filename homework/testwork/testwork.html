@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>                               <!--HTML-->
+<title>蘇彥華的個人網頁</title>       <!--網頁名稱-->
+<meta name ="viewport" content = "width= device-width ;initial-scale=1" >       <!--隨裝置寬度改變解析度-->
+<head>
+    <style>
+    p {font-size: 25px;}    /*css*/
+    body{
+        background-color: lightblue;
+    }
+
+
+
+        .sidenav {              /*側欄*/
+        height: 100%;
+        width: 180px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+         background-color: #111;
+        overflow-x: hidden;
+        padding-top: 20px;
+        }
+
+        .main
+        {
+        margin-left: 160px;
+        padding: 0px 10px;
+        }
+        
+        .sidenav a {
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+         display: block;
+        }
+
+        .sidenav a:hover {
+        color: #ffffff;
+        }
+
+        .main {
+        margin-left: 160px;
+        padding: 0px 10px;
+        }
+        
+        @media screen and (max-height: 450px) {
+        .sidenav {padding-top: 15px;}
+        .sidenav a {font-size: 18px;}
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style ="text-align:center;font-size:60px;">主頁</h1>
+    <hr>
+    <h2 style="font-size:45px;text-align:center;">蘇彥華</h2>
+    <p style ="text-align:center;">性別:男</p>
+    <p style ="text-align:center;">生日:2001/01/09</p>
+    <p style ="text-align:center;">學號:110810403</p>
+    <p style ="text-align:center;">班級:土木一</p>
+    <p style ="text-align:center;">興趣:遊戲、閱讀</p>
+    <p style ="text-align:center;">畢業於:
+        <a href="http://www.fcps.tc.edu.tw/">富春國小</a>
+        <a href="http://www.fyjh.tc.edu.tw/">豐原國中</a>
+        <a href="http://www.hzsh.tc.edu.tw/ischool/publish_page/0/">后綜高中</a>
+    </p>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>        <!--關閉的按鈕 -->
+        <p style="font-size: 20px;color: white;">我拍攝的照片></p>
+        <a href="work1.html">My Photos</a>     <!--跳轉我的作品 -->  
+        <p style="font-size: 20px;color: white;">我的一些社群網站></p>
+        <a href="https://www.instagram.com/dgjufcdj/?hl=zh-tw">IG</a>  <!--跳轉我的IG -->
+        <a href="https://www.facebook.com/profile.php?id=100003267592671">FB</a>            <!--跳轉我的FB -->
+        <p id="datetime" style="font-size: 14px;color: white;"></p>
+        
+      </div>
+
+      <span style="font-size:30px;cursor:pointer;color: rgb(0, 0, 0);position: absolute;top: 3%;left5%;" onclick="openNav()">&#9776;menu</span> <!--側欄 鼠標 字體大小 -->
+        <script>
+            setInterval("document.getElementById('datetime').innerHTML=new Date().toLocaleString();", 1000);
+        </script>
+      </div>
+      
+    <script>
+        function  openNav()  //側欄開啟
+            {
+              document.getElementById("mySidenav").style.width = "300px";
+            }
+        function closeNav() //側欄關閉
+        {
+          document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+
+
+
+</body>
+</html>
